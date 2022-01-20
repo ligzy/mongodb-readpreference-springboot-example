@@ -31,7 +31,7 @@ class StandaloneMongoConfig extends AbstractMongoClientConfiguration {
 
     @Override
     protected void configureClientSettings(MongoClientSettings.Builder builder) {
-        builder.applyConnectionString(new ConnectionString(mongoUri));
+        builder.applyConnectionString(new ConnectionString(mongoUri)).readPreference(ReadPreference.primaryPreferred());
     }
 
 }

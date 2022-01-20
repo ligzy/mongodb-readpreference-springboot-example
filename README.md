@@ -1,2 +1,2 @@
-# cosmosdb-mongodb-readpreference-springboot-java
+# mongodb-readpreference-springboot-java
  
