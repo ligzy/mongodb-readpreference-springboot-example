@@ -23,6 +23,8 @@ class StandaloneMongoConfig extends AbstractMongoClientConfiguration {
     @Value("${spring.data.mongodb.uri}")
     public String mongoUri;
 
+    @Value("${spring.data.mongodb.readPreference}")
+    public String readPreference;
 
     @Override
     protected String getDatabaseName() {
@@ -31,7 +33,7 @@ class StandaloneMongoConfig extends AbstractMongoClientConfiguration {
 
     @Override
     protected void configureClientSettings(MongoClientSettings.Builder builder) {
-        builder.applyConnectionString(new ConnectionString(mongoUri)).readPreference(ReadPreference.primaryPreferred());
+        builder.applyConnectionString(new ConnectionString(mongoUri)).readPreference(ReadPreference.valueOf(readPreference));
     }
 
 }

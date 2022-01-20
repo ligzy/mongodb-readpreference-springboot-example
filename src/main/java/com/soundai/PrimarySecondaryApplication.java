@@ -71,7 +71,7 @@ public class PrimarySecondaryApplication implements CommandLineRunner {
 					int i = 0;
 					while (i++ < 100) {
 						long total = primaryRepository.count();
-						System.out.println("total primaryRepository:" + total);
+						System.out.println("total primary:" + total);
 						Thread.currentThread().sleep(100);
 					}
 				} catch (InterruptedException e) {
@@ -88,7 +88,7 @@ public class PrimarySecondaryApplication implements CommandLineRunner {
 					int i = 0;
 					while (i++ < 100) {
 						long total = secondRepository.count();
-						System.out.println("total  secondRepository:" + total);
+						System.out.println("total  second:" + total);
 						Thread.currentThread().sleep(100);
 					}
 				} catch (InterruptedException e) {
