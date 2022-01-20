@@ -14,8 +14,7 @@ import com.mongodb.ReadPreference;
 
 
 @Configuration
-@EnableMongoRepositories(basePackages = "com.soundai.repository.standalone",
-mongoTemplateRef = "primaryMongoTemplate")
+@EnableMongoRepositories(basePackages = "com.soundai.repository.standalone")
 class StandaloneMongoConfig extends AbstractMongoClientConfiguration {
 
     @Autowired
@@ -32,7 +31,7 @@ class StandaloneMongoConfig extends AbstractMongoClientConfiguration {
 
     @Override
     protected void configureClientSettings(MongoClientSettings.Builder builder) {
-        builder.applyConnectionString(new ConnectionString(mongoUri)).readPreference(ReadPreference.secondary());
+        builder.applyConnectionString(new ConnectionString(mongoUri));
     }
 
 }

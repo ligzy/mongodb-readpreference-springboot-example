@@ -8,10 +8,10 @@
 		<version>2.5.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>azure.cosmosdb.mongodb.spring</groupId>
-	<artifactId>cosmosdb-mongodb</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>cosmosdb-mongodb</name>
+	<groupId>com.soundai</groupId>
+	<artifactId>azero-mongodb-demo</artifactId>
+	<version>0.0.1</version>
+	<name>azero-mongodb-demo</name>
 	<description>Demo project for Spring Boot connecting to mongo API in CosmosDB</description>
 	<properties>
 		<java.version>11</java.version>

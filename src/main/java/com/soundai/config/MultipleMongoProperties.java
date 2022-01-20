@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import lombok.Data;
 
 @Data
-@ConfigurationProperties(prefix = "mongodb")
+@ConfigurationProperties(prefix = "spring.data.mongodb")
 public class MultipleMongoProperties {
 
     private MongoProperties primary = new MongoProperties();

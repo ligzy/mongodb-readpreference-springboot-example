@@ -36,7 +36,7 @@ public class PrimarySecondaryApplication implements CommandLineRunner {
 
 			@Override
 			public void run() {
-				for(int i=0;i<1000;i++)
+				for(int i=0;i<10000;i++)
 				{
 					repository.save(new Customer("Alice "+i, "Smith"));
 					repository.save(new Customer("Bob "+ i, "Smith"));
@@ -46,10 +46,6 @@ public class PrimarySecondaryApplication implements CommandLineRunner {
 		
 		// fetch all customers
 		System.out.println("Customers found with findAll():");
-//		System.out.println("-------------------------------");
-//		for (Customer customer : repository.findAll()) {
-//			System.out.println(customer);
-//		}
 		new Thread(new Runnable() {
 
 			@Override
@@ -58,7 +54,7 @@ public class PrimarySecondaryApplication implements CommandLineRunner {
 					int i = 0;
 					while (i++ < 100) {
 						long total = repository.count();
-						System.out.println("total:" + total);
+						System.out.println("total standalone:" + total);
 						Thread.currentThread().sleep(100);
 					}
 				} catch (InterruptedException e) {
