@@ -1,8 +1,10 @@
-package azure.cosmosdb.mongodb.spring.cosmosdbmongodb;
+package com.soundai.repository.standalone;
 
 import java.util.List;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.soundai.repository.Customer;
 
 public interface CustomerRepository extends MongoRepository<Customer, String> {
 
